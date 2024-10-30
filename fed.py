@@ -53,8 +53,8 @@ async def enviar_depoimento():
         except Exception as e:
             print(f"Erro ao enviar mensagem: {e}")
 
-        # Aguarda 20 segundos antes do próximo envio
-        await asyncio.sleep(20)
+        # Aguarda 3300 segundos (55 minutos) antes do próximo envio
+        await asyncio.sleep(3300)
 
     # Reinicia o processo embaralhando as imagens novamente
     await enviar_depoimento()  # Chama novamente a função para reiniciar o envio
