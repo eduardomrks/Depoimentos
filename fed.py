@@ -6,7 +6,15 @@ from telethon import TelegramClient, Button
 api_id = '25852424'
 api_hash = 'e51922dc0c686c1e19c97d1eadbbd9da'
 bot_token = '8011328611:AAG-3kmaQBQOjFCRHUoVAciGS61toL3LKw4'
-chat_id = -1002341312506  # Substitua pelo ID do chat correto (número inteiro)
+
+# Lista de chat_ids
+chat_ids = [
+    -1002193276009,  # Substitua pelos IDs dos chats corretos
+    -1002116848333,
+    -1002247874958,
+    -1002205711968,
+    -1001935737212
+]
 
 # Inicializa o cliente do Telegram
 client = TelegramClient('bot_session', api_id, api_hash).start(bot_token=bot_token)
@@ -43,15 +51,17 @@ async def enviar_depoimento():
             [Button.url("🎁CADASTRE-SE 🎁", "https://go.aff.goldebet.com/761gv59p")]
         ]
 
-        try:
-            await client.send_file(
-                chat_id,
-                imagem,
-                caption=mensagem,
-                buttons=botoes
-            )
-        except Exception as e:
-            print(f"Erro ao enviar mensagem: {e}")
+        # Envia mensagem para cada chat_id na lista
+        for chat_id in chat_ids:
+            try:
+                await client.send_file(
+                    chat_id,
+                    imagem,
+                    caption=mensagem,
+                    buttons=botoes
+                )
+            except Exception as e:
+                print(f"Erro ao enviar mensagem para o chat {chat_id}: {e}")
 
         # Aguarda 3300 segundos (55 minutos) antes do próximo envio
         await asyncio.sleep(3300)
