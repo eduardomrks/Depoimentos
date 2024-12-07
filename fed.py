@@ -17,7 +17,8 @@ chat_ids = [
     -1002139156285,  
     -1002140261074,
     -1001910015155,
-    -1002108499341, # Novo nono chat_id
+    -1002108499341,
+    -1002376978863, # Novo nono chat_id
 ]
 
 # Inicializa o cliente do Telegram
