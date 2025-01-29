@@ -53,8 +53,8 @@ async def enviar_depoimento():
 
         # Botões organizados em uma lista de listas para ficarem um embaixo do outro
         botoes = [
-            [Button.url("🚨JOGAR AGORA🚨", "https://go.aff.goldebet.com/761gv59p")],
-            [Button.url("🎁CADASTRE-SE 🎁", "https://go.aff.goldebet.com/761gv59p")]
+            [Button.url("🚨JOGAR AGORA🚨", "https://1wprru.life/?p=iq1e")],
+            [Button.url("🎁CADASTRE-SE 🎁", "https://1wprru.life/?p=iq1e")]
         ]
 
         # Envia mensagem para cada chat_id na lista
