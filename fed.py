@@ -53,8 +53,8 @@ async def enviar_depoimento():
 
         # Botões organizados em uma lista de listas para ficarem um embaixo do outro
         botoes = [
-            [Button.url("🚨JOGAR AGORA🚨", "https://abrir.ai/SlotNews")],
-            [Button.url("🎁CADASTRE-SE 🎁", "https://abrir.ai/SlotNews")]
+            [Button.url("🚨JOGAR AGORA🚨", "https://abrir.ai/News")],
+            [Button.url("🎁CADASTRE-SE 🎁", "https://abrir.ai/News")]
         ]
 
         # Envia mensagem para cada chat_id na lista
